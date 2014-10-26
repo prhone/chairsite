@@ -34,6 +34,24 @@ slide(".box_images",".box",".white_bell");
       //console.log($(this).text());
       var textZlisty=$(this).text();
       $(this).parent().siblings(".list_label").text(textZlisty);
+      $(this).parent().slideUp();
+      //$(".panel_left").children(".title").text(textZlisty);
+      var numerListy = $(this).parent().parent().index();
+      console.log(numerListy);
+      switch(numerListy) {
+          case 0: {
+               $(".panel_left").children(".title").text(textZlisty);
+               break;  
+          }
+          case 1: {
+               $(".panel_left").children(".color").text(textZlisty);
+               break;
+          }
+          case 2: {
+               $(".panel_left").children(".pattern").text(textZlisty)
+          }
+      };
+      
   });
 });
 
