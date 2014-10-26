@@ -37,20 +37,25 @@ slide(".box_images",".box",".white_bell");
       $(this).parent().slideUp();
       //$(".panel_left").children(".title").text(textZlisty);
       var numerListy = $(this).parent().parent().index();
-      console.log(numerListy);
+      //console.log(numerListy);
+      var cena = $(this).data("value");
       switch(numerListy) {
           case 0: {
                $(".panel_left").children(".title").text(textZlisty);
+               $(".panel_right").children(".title").text(cena);
                break;  
           }
           case 1: {
                $(".panel_left").children(".color").text(textZlisty);
+               $(".panel_right").children(".color").text(cena);
                break;
           }
           case 2: {
-               $(".panel_left").children(".pattern").text(textZlisty)
+               $(".panel_left").children(".pattern").text(textZlisty);
+               $(".panel_right").children(".color").text(cena);
           }
       };
+      
       
   });
 });
