@@ -24,6 +24,17 @@ slide(".box_images",".box",".white_bell");
     maxSlides: 3,
     slideMargin: 10
   });
+  
+  $(".list_arrow").on("click", function() {
+//      $(".list_panel").slideToggle();
+        $(this).next(".list_panel").slideToggle();
+  });
+  
+  $(".list_panel").children("li").on("click", function(){
+      //console.log($(this).text());
+      var textZlisty=$(this).text();
+      $(this).parent().siblings(".list_label").text(textZlisty);
+  });
 });
 
 
