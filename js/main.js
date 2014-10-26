@@ -58,6 +58,30 @@ slide(".box_images",".box",".white_bell");
       
       
   });
+    $(".checkbox").on("click", function () {
+//      $(this).addClass("active");
+        $(this).toggleClass("active");
+        var TekstTransport = $(this).next().text();
+        var CenaTransport = $(this).next().data("value");
+
+//      if($(".active").is(":visible")) {
+//          $(".summary_panel").children(".panel_left").find(".transport").text(TekstTransport);
+//          $(".summary_panel").children(".panel_right").find(".transport").text(CenaTransport);
+//      }
+//      else {
+//          $(".summary_panel").children(".panel_left").find(".transport").text("");
+//          $(".summary_panel").children(".panel_right").find(".transport").text("");
+//      }
+
+
+        if ($('.active').is(':visible')) {
+            $('.summary_panel').children('.panel_left').find('.transport').text(TekstTransport);
+            $('.summary_panel').children('.panel_right').find('.transport').text(CenaTransport);
+        } else {
+            $('.summary_panel').children('.panel_left').find('.transport').text("");
+            $('.summary_panel').children('.panel_right').find('.transport').text("");
+        }
+    });
 });
 
 
